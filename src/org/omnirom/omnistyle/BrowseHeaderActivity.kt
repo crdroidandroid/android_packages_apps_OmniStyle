@@ -31,7 +31,7 @@ open class BrowseHeaderActivity : ComponentActivity() {
     protected open val pickerMode: Boolean = false
 
     @get:StringRes
-    protected open val titleRes: Int = R.string.browse_header
+    protected open val titleRes: Int = R.string.omnistyle_browse_header
 
     /** Restrict the screen to a single pack; null lists every installed pack. */
     protected open fun fixedPack(): HeaderPack? = null
@@ -64,16 +64,16 @@ open class BrowseHeaderActivity : ComponentActivity() {
 /** Entry point used by Settings: tapping a header applies it. */
 class PickHeaderActivity : BrowseHeaderActivity() {
     override val pickerMode = true
-    override val titleRes = R.string.pick_header
+    override val titleRes = R.string.omnistyle_pick_header
 }
 
 /** OmniStyle's own bundled theme headers (assets/theme.xml). */
 class BrowseThemeHeaderActivity : BrowseHeaderActivity() {
     override val pickerMode = true
-    override val titleRes = R.string.browse_theme_header
+    override val titleRes = R.string.omnistyle_browse_theme_header
 
     override fun fixedPack() = HeaderPack(
-        label = getString(R.string.browse_theme_header),
+        label = getString(R.string.omnistyle_browse_theme_header),
         packageName = packageName,
         configName = "$packageName.theme",
     )

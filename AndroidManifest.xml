@@ -38,7 +38,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:theme="@style/Theme.OmniStyle" >
         <activity
             android:name=".BrowseHeaderActivity"
-            android:label="@string/browse_header"
+            android:label="@string/omnistyle_browse_header"
             android:theme="@style/Theme.OmniStyle.NoActionBar"
             android:exported="true" >
             <intent-filter>
@@ -48,7 +48,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         </activity>
         <activity
             android:name=".PickHeaderActivity"
-            android:label="@string/pick_header"
+            android:label="@string/omnistyle_pick_header"
             android:theme="@style/Theme.OmniStyle.NoActionBar"
             android:exported="true" >
             <intent-filter>
@@ -58,7 +58,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         </activity>
         <activity
             android:name=".BrowseThemeHeaderActivity"
-            android:label="@string/browse_theme_header"
+            android:label="@string/omnistyle_browse_theme_header"
             android:theme="@style/Theme.OmniStyle.NoActionBar"
             android:exported="true" >
             <intent-filter>

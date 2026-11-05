@@ -135,7 +135,7 @@ fun HeaderPickerScreen(
     val scope = rememberCoroutineScope()
     val snackbar = remember { SnackbarHostState() }
     val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
-    val appliedMessage = stringResource(R.string.custom_header_image_notice)
+    val appliedMessage = stringResource(R.string.omnistyle_custom_header_image_notice)
 
     var packs by remember { mutableStateOf<List<HeaderPack>?>(null) }
     var selectedPackKey by rememberSaveable { mutableStateOf<String?>(null) }
@@ -174,7 +174,7 @@ fun HeaderPickerScreen(
                     IconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = stringResource(R.string.navigate_up),
+                            contentDescription = stringResource(R.string.omnistyle_navigate_up),
                         )
                     }
                 },
@@ -229,8 +229,8 @@ fun HeaderPickerScreen(
             when {
                 allPacks != null && allPacks.isEmpty() -> fullWidth("empty") {
                     EmptyState(
-                        title = stringResource(R.string.header_empty_title),
-                        summary = stringResource(R.string.header_empty_summary),
+                        title = stringResource(R.string.omnistyle_header_empty_title),
+                        summary = stringResource(R.string.omnistyle_header_empty_summary),
                     )
                 }
 
@@ -246,7 +246,7 @@ fun HeaderPickerScreen(
                     if (pack.headers.isEmpty()) {
                         fullWidth("pack_empty") {
                             EmptyState(
-                                title = stringResource(R.string.header_pack_empty),
+                                title = stringResource(R.string.omnistyle_header_pack_empty),
                                 summary = null,
                             )
                         }
@@ -353,7 +353,7 @@ private fun CurrentHeaderCard(applied: AppliedHeader, label: String) {
     ) {
         Column(Modifier.padding(12.dp)) {
             Text(
-                text = stringResource(R.string.header_current),
+                text = stringResource(R.string.omnistyle_header_current),
                 style = MaterialTheme.typography.labelLarge,
                 color = MaterialTheme.colorScheme.onPrimaryContainer,
                 modifier = Modifier.padding(start = 8.dp, top = 4.dp, bottom = 10.dp),
@@ -405,9 +405,9 @@ private fun PackInfo(pack: LoadedPack) {
             style = MaterialTheme.typography.titleMedium,
             color = MaterialTheme.colorScheme.onSurface,
         )
-        val count = pluralStringResource(R.plurals.header_count, pack.headers.size, pack.headers.size)
+        val count = pluralStringResource(R.plurals.omnistyle_header_count, pack.headers.size, pack.headers.size)
         val subtitle = pack.creator?.let {
-            stringResource(R.string.header_pack_summary, count, it)
+            stringResource(R.string.omnistyle_header_pack_summary, count, it)
         } ?: count
         Text(
             text = subtitle,
